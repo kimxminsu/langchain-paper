@@ -1,5 +1,4 @@
 # 문서 데이터 수집
-from langchain_community.document_loaders import WebBaseLoader
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import quote_plus
@@ -7,8 +6,7 @@ from urllib.parse import quote_plus
 class Crawler:
     BASE_URL = "http://export.arxiv.org/api/query"
     
-    def __init__(self, search_query, max_results=10):
-        # self.loader = WebBaseLoader()
+    def __init__(self, search_query, max_results=35):
         self.search_query = search_query
         self.max_results = max_results
         
@@ -32,8 +30,3 @@ class Crawler:
             summary = entry.summary.text.strip()
             papers.append({'title': title, 'summary': summary})
         return papers
-
-    # def crawl(self, url):
-        #     # TODO: 웹 크롤링 구현
-        #     document = self.loader.load(url)
-        #     return document
