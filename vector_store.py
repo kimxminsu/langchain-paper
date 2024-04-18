@@ -1,7 +1,6 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter, CharacterTextSplitter
 from langchain_google_genai.embeddings import GoogleGenerativeAIEmbeddings
 from langchain_chroma import Chroma
-from retriever import Retriever
 
 class VectorStore:
     """VectorStore
