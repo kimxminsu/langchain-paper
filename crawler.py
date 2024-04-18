@@ -17,7 +17,15 @@ class Crawler:
         sanitized_query = self.sanitize_search_query()
         response = requests.get(f"{self.BASE_URL}?search_query={sanitized_query}&max_results={self.max_results}")
         if response.status_code == 200:
-            return self.process_search_results(response.text)
+            soup =  BeautifulSoup(response.content, 'xml')
+            entries = soup.find_all('entry')
+            papers = []
+            for entry in entries:
+                title = entry.title.text.strip()
+                summary = entry.summary.text.strip()
+                papers.append({'title': title, 'summary': summary})
+            return papers
+            # return self.process_search_results(response.text)
         else:
             raise Exception(f"Failed to fetch data from arXiv, status code: {response.status_code}")
 
