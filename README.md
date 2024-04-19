@@ -1,7 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Team13)
 
 ## 👥 Members
-| <img src="https://avatars.githubusercontent.com/jenner9212" width=150px><br />[박재윤](https://github.com/jenner9212) | <img src="https://avatars.githubusercontent.com/kimxminsu" width=150px><br />[김민수](https://github.com/kimxminsu) | <img src="https://avatars.githubusercontent.com/a-day-and-the-day" width=150px><br />[박나현](https://github.com/a-day-and-the-day) | <img src="https://avatars.githubusercontent.com/zuzizzuziz1" width=150px><br />[최승아](https://github.com/zuzizzuziz1]) | <img src="https://avatars.githubusercontent.com/00nam11" width=150px><br />[조하림](https://github.com/00nam11) |
+| <img src="https://avatars.githubusercontent.com/jenner9212" width=150px><br />[박재윤](https://github.com/jenner9212) | <img src="https://avatars.githubusercontent.com/kimxminsu" width=150px><br />[김민수](https://github.com/kimxminsu) | <img src="https://avatars.githubusercontent.com/a-day-and-the-day" width=150px><br />[박나현](https://github.com/a-day-and-the-day) | <img src="https://avatars.githubusercontent.com/zuzizzuziz1" width=150px><br />[최승아](https://github.com/zuzizzuziz1]) | <img src="https://avatars.githubusercontent.com/00nam11" width=150px><br />[전영남](https://github.com/00nam11) |
 |:--:|:--:|:--:|:--:|:--:|
 |main, crawl, gemini|vector_store, retreiver|chat, gemini|logger|sql
 
@@ -16,7 +16,7 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Orbit&pause=1000&color=000000&center=true&vCenter=true&random=false&width=435&lines=Please+wait+...)](https://git.io/typing-svg)
 
-6. `User question: `가 나오면 `질문 내용`을 입력하세요....반복
+6. `User question: `가 나오면 `질문 내용`을 입력하세요....반복 ( ! 토큰 제한으로 인해 토큰 초과시 에러가 발생할 수 있습니다)
 7. `exit`를 입력하시면 실행이 종료됩니다.
 
 ## :computer: Result
@@ -34,14 +34,14 @@
 9. conversation에 찾고 싶은 내용을 넣어서 gemini의 결과값을 반환합니다.
 
 ## Module
-`main`: 애플리케이션의 메인 실행 흐름을 제어합니다.
-`gemini` : gemini API를 호출하고, response를 받는 역할을 합니다.
-`vector-store` : RAG를 구축하기 위해서, 텍스트 데이터를 Split하고 Vector DB에 store하는 역할을 합니다.
-`retriever`: Vector DB에서 사용자 입력과 연관된 Knowledge를 찾는 검색하는 역할을 합니다.
-`crawler` : KB를 구축하는데 필요한 문서 데이터를 수집하는 역할을 합니다.
-`chat` : user input과 LLM answer를 기반으로 답변을 어떻게 생성할지 정하는 역할을 합니다.
-`sql` : sqlite나 MySQL을 사용하기 위해서 RDBMS를 연동하고, SQL을 처리하는 역할을 합니다. -> 사용X
-`logger` : chat이 실행될 때마다 User question 입력값, gemini response값, 시간을 저장합니다.
+`main`: 애플리케이션의 메인 실행 흐름을 제어합니다.   
+`gemini` : gemini API를 호출하고, response를 받는 역할을 합니다.   
+`vector-store` : RAG를 구축하기 위해서, 텍스트 데이터를 Split하고 Vector DB에 store하는 역할을 합니다.   
+`retriever`: Vector DB에서 사용자 입력과 연관된 Knowledge를 찾는 검색하는 역할을 합니다.   
+`crawler` : KB를 구축하는데 필요한 문서 데이터를 수집하는 역할을 합니다.   
+`chat` : user input과 LLM answer를 기반으로 답변을 어떻게 생성할지 정하는 역할을 합니다.   
+`sql` : sqlite나 MySQL을 사용하기 위해서 RDBMS를 연동하고, SQL을 처리하는 역할을 합니다. -> 사용X   
+`logger` : chat이 실행될 때마다 User question 입력값, gemini response값, 시간을 저장합니다.   
 
 ## Project explain
 ![image](https://github.com/jenner9212/langchain/assets/35947676/75a24a25-ab1f-4375-a67a-59b82ec9a2d0)
