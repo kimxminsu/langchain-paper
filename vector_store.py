@@ -13,7 +13,9 @@ class VectorStore:
     
     def store(self, papers):
         """자연어를 500자 간격으로 자르고 벡터화하여 벡터DB에 저장"""
-        document_summary = papers[0]['summary']
+        document_summary = ""
+        for paper in papers:
+            document_summary += paper['summary']
         text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=0)
         pages = text_splitter.split_text(document_summary)
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
