@@ -7,7 +7,7 @@ class GeminiAPI:
     def __init__(self, api_key):
         self.api_key = api_key
         self.llm = ChatGoogleGenerativeAI(model='gemini-pro', temperature=0.2)
-        self.memory = ConversationBufferWindowMemory(k=10)
+        self.memory = ConversationBufferWindowMemory(k=14)
         self.template = """
                         You are a professor. Answer clearly.
                         History: {history}
